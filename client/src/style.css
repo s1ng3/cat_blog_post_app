@@ -1,0 +1,435 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light blue background */
+    color: #333;
+
+    background-image: url('./assets/cat_bg_2.jpg'); /* Background image */
+    background-size: contain;
+    background-repeat: repeat; /* Repeat the background image */
+    background-position: center center; /* Center the background image */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 70px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add spacing between image and text */
+}
+
+.logo-text {
+    font-size: 1.5em; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Text color */
+}
+
+
+
+
+/* style.css */
+.navbar-header {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255); /* Opaque white background */
+    padding: 20px; /* Add padding for spacing */
+    top:0;
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333; /* Match text color to background image */
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    color: #333; /* Match text color to background image */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    padding: 5px 10px; /* Add padding to make links more defined */
+    border-radius: 5px; /* Add border radius to make links more defined */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.link:hover {
+    color: #666; /* Darker color on hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Add background color on hover */
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+}
+
+.btn_input {
+    padding: 10px 20px;
+    background-color: #ff9900; /* Match button color to background image */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.rolling-text {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: rolling 4s linear infinite;
+    left: -500px;
+    margin-left: 1000px;
+}
+
+@keyframes rolling {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.btn_input:hover {
+    background-color: #cc7700; /* Darker color on hover */
+}
+
+@media (max-width: 768px) {
+    .navbar-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar-links {
+        margin: 10px 0;
+    }
+    
+    .link {
+        margin: 5px 0;
+    }
+}
+
+.signup_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    margin-top: 80px; /* Increase this value to move the form down */
+}
+
+.signup_form,
+.post_form {
+    border: 2px solid #ff8c00; /* Dark orange border */
+    padding: 30px;
+    border-radius: 15px; /* Slightly rounded corners */
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff5eb; /* Light orange background */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    margin-top: 80px;
+
+}
+
+.signup_form form input,
+.post_form input,
+.post_form textarea,
+.post_form button {
+    padding: 15px; /* Slightly larger padding */
+    border-radius: 8px; /* More rounded edges */
+    margin-top: 15px; /* Increased spacing */
+    width: 100%;
+    border: 2px solid #ff8c00; /* Dark orange border */
+    background-color: #fff; /* White background */
+    font-size: 16px; /* Slightly larger font size */
+    color: #333; /* Darker text color */
+}
+
+.signup_form form button,
+.signup_form button,
+.post_form button {
+    cursor: pointer;
+    background-color: #ff8c00; /* Dark orange button */
+    color: #fff; /* White text */
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.signup_form form button:hover,
+.signup_form button:hover,
+.post_form button:hover {
+    background-color: #ff9933; /* Lighter orange for hover effect */
+}
+.signup_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.signup_form {
+    display: flex; /* Add flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    border: 2px solid #ff8c00; /* Dark orange border */
+    padding: 30px;
+    border-radius: 15px; /* Slightly rounded corners */
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff5eb; /* Light orange background */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    text-align: center; /* Center text */
+}
+
+
+.signup_form form input,
+.signup_form form button {
+    padding: 15px; /* Slightly larger padding */
+    border-radius: 50px; /* Round border */
+    margin-top: 15px; /* Increased spacing */
+    width: 100%;
+    border: 2px solid #ff8c00; /* Dark orange border */
+    background-color: #fff; /* White background */
+    font-size: 16px; /* Slightly larger font size */
+    color: #333; /* Darker text color */
+}
+
+.signup_form form button {
+    cursor: pointer;
+    background-color: #ff8c00; /* Dark orange button */
+    color: #fff; /* White text */
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.signup_form form button:hover {
+    background-color: #ff9933; /* Lighter orange for hover effect */
+}
+
+.signup_btn {
+    padding: 15px; /* Slightly larger padding */
+    border-radius: 8px; /* More rounded edges */
+    width: 100%;
+    border: 2px solid #ff8c00; /* Dark orange border */
+    background-color: #ff8c00; /* Dark orange background */
+    color: #fff; /* White text */
+    font-size: 16px; /* Slightly larger font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup_btn:hover {
+    background-color: #ff9933; /* Lighter orange for hover effect */
+}
+.posts_container {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.post {
+    width: 80%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #efe8e8f4;
+    height: auto;
+}
+
+.post:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+}
+
+.post img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.post .post_text {
+    margin-left: 20px;
+}
+
+.post_post {
+    display: flex; /* Add flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    width: 80%;
+    margin: 20px 0;
+    margin-top: 80px;
+    animation: spin 5s linear infinite, zoom 3s ease-in-out infinite;
+
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.post_post img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post_post button {
+    width: 100px;
+    margin-top: 20px;
+    background-color:#cc7700; /* Soft blue color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post_post button:hover {
+    background-color: #ff9900; /* Darker blue for hover effect */
+}
+
+/* Floating Button Styles */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff9900; /* Soft blue color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.floating-button:hover {
+    background-color: #ff9990; /* Darker blue for hover effect */
+    transform: scale(1.1);
+}
+
+
+/* src/components/About.css */
+
+.about {
+    padding: 40px; /* Increase padding */
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  .about h1 {
+    font-size: 3em; /* Increase font size */
+    margin-bottom: 30px; /* Adjust margin */
+  }
+  
+  .about p {
+    font-size: 1.5em; /* Increase font size */
+    margin-bottom: 60px; /* Adjust margin */
+  }
+  .skin-colored-container {
+    background-color: #ffe0bdcb; /* Skin-colored background */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 15px; /* Rounded corners */
+}
+  
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .team-member {
+    width: 250px; /* Increase width */
+    margin: 30px; /* Adjust margin */
+    padding: 30px; /* Adjust padding */
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Increase border radius */
+    background-color: #ff9900d5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adjust box shadow */
+  }
+  
+  .member-image {
+    width: 150px; /* Increase width */
+    height: 150px; /* Increase height */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px; /* Adjust margin */
+  }
+  
+  .team-member h2 {
+    font-size: 2em; /* Increase font size */
+    margin: 15px 0; /* Adjust margin */
+  }
+  
+  .team-member h3 {
+    font-size: 1.5em; /* Increase font size */
+    margin: 15px 0; /* Adjust margin */
+    color: #595959;
+  }
+  
+  .team-member p {
+    font-size: 1.2em; /* Increase font size */
+    color: #555;
+  }
+  

@@ -1,0 +1,81 @@
+.post_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.post_post {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.post_image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.post_title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post_description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.post_actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.post_edit, .post_delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    min-width: 100px;
+
+}
+
+.post_edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.post_edit:hover {
+    background-color: #45a049;
+}
+
+.post_delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s;
+    background-color: #f44336; /* Apply background color */
+    color: white; /* Apply text color */
+    white-space: nowrap; /* Ensure the text doesn't break */
+    display: inline-block; /* Ensure proper width calculation */
+    min-width: 100px; /* Set a minimum width for the button */
+}
+
+.post_delete:hover {
+    background-color: #d32f2f;
+}
